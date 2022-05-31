@@ -8,12 +8,12 @@
 #include "Persona.h"
 #include "Grupo.h"
 
-class Zona :  public Grupo{
+class Zona :  public Region{
 private:
     Persona *coordinador;
     string nombreZona;
 
-    vector<Grupo *> zonaLista;
+    vector<Region *> zonaLista;
 public:
     Zona();
     Zona(Persona *coordinador, const string &nombreZona);
@@ -27,8 +27,8 @@ public:
     int obtenerTotalCantidadAsociados() const override;
     string toString() const override;
 
-    void agregar(Grupo *grupo) override;
-    const vector<Grupo *> &getZonaLista() const;
+    void agregar(Region *region);
+    const vector<Region *> &getZonaLista() const;
 };
 
 
