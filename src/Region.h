@@ -12,9 +12,9 @@ using namespace std;
 
 class Region {
 protected:
-    double presupuesto;
-    int cantidadDeActividades;
-    int cantidadDeAsociados;
+    double presupuesto = 0;
+    int cantidadDeActividades = 0;
+    int cantidadDeAsociados = 0;
 
 public:
     Region() = default;
