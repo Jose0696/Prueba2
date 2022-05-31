@@ -61,7 +61,3 @@ string Grupo::toString() const {
     <<" cantidadDeAsociados: " << obtenerTotalCantidadAsociados() <<" codigo: " << getCodigo() <<" codigoGrupo: " << getCodigoGrupo() <<" nombreGrupo: " <<getNombreGrupo();
     return output.str();
 }
-
-void Grupo::agregar(Grupo *grupo) {
-
-}
