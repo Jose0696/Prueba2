@@ -17,40 +17,25 @@ void Zona::setNombreZona(const string &nombreZona) {
 }
 
 int Zona::obtenerTotalCantActividades() const {
-    Servicio servicio;
-    int resultado = 0;
-    for(const auto & grupo : getZonaLista()){
-        resultado = servicio.obtenerActividadPorAno(grupo->getCodigo());
-    }
-    return resultado;
+    return cantidadDeActividades;
 }
 
 double Zona::obtenerTotalPresupuesto() const {
-    Servicio servicio;
-    double resultado = 0;
-    for(const auto & grupo : getZonaLista()){
-        resultado = servicio.obtenerPresupuesto(grupo->getCodigo());
-    }
-    return resultado;
+    return presupuesto;
 }
 
 int Zona::obtenerTotalCantidadAsociados() const {
-    Servicio servicio;
-    int resultado;
-    for(const auto & grupo : getZonaLista()){
-        resultado = servicio.obtenerCantidadAsociados(grupo->getCodigo());
-    }
-    return resultado;
+    return cantidadDeAsociados;
 }
 
-void Zona::agregar(Grupo *grupo) {
-    double presupuestoAux = grupo->obtenerTotalPresupuesto() + grupo->obtenerTotalPresupuesto();
-    grupo->setPresupuesto(presupuestoAux);
-
-    zonaLista.push_back(grupo);
+void Zona::agregar(Region *region) {
+    this->setPresupuesto(this->getPresupuesto() + region->getPresupuesto()) ;
+    this->setCantidadDeAsociados(this->getCantidadDeAsociados() + region->getCantidadDeAsociados());
+    this->setCantidadDeActividades(this->getCantidadDeActividades() + region->getCantidadDeActividades());
+    zonaLista.push_back(region);
 }
 
-const vector<Grupo *> &Zona::getZonaLista() const {
+const vector<Region *> &Zona::getZonaLista() const {
     return zonaLista;
 }
 
