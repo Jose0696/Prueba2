@@ -36,7 +36,6 @@ public:
     int obtenerTotalCantidadAsociados() const override;
     string toString() const override;
 
-    virtual void agregar(Grupo *grupo);
 };
 
 
