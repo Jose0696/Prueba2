@@ -148,7 +148,7 @@ Con base en las clases anteriores se deduce un posible DRC.
 
 La prueba de ese modelo se realizará con las pruebas de unidad que ya tienen datos de prueba (quemados), donde se utilizará la organización del esquema inicial, que se trata de la situación nacional de donde solo se tienen ocho (8) grupos de interés en sus respectivas zonas, y eso es lo que hay. 
 
-Notar a los coordinadores encargados (cedula, nombre y edad) por la Empresa Internacional de cada zona que tiene a su cargo..
+Notar a los coordinadores encargados (cedula, nombre y edad) por la Empresa Internacional de cada zona que tiene a su cargo.
 
 ## Rúbrica de evaluación
 
